@@ -47,11 +47,11 @@
                                     <a class="nav-link menu-link" href="./portfolio.php">Portfolio</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="blogDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Blog
+                                    <a class="nav-link dropdown-toggle" href="blog.php" id="blogDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Blogs
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="blogDropdownMenu">
-                                        <a class="dropdown-item" href="./blog.php">Blog</a>
+                                        <a class="dropdown-item" href="./blog.php">Blogs</a>
                                         <a class="dropdown-item" href="./blog-single.php">Blog Single</a>
                                     </div>
                                 </li>

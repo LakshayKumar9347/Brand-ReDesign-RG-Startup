@@ -389,7 +389,7 @@
                         </div>
                     </div>
                     <div class="hero-btn m-4">
-                        <a href="#" class="primary-button wow fadeInUp" data-wow-delay="0.8s">View Portfolio<i class="fa fa-arrow-right ml-3"></i></a>
+                        <a href="./portfolio.php" class="primary-button wow fadeInUp" data-wow-delay="0.8s">View Portfolio<i class="fa fa-arrow-right ml-3"></i></a>
                     </div>
                 </div>
             </div>
@@ -735,103 +735,103 @@
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
-                                <a href="blog-single.html">
+                                <a href="blog-single.php">
                                     <img src="img/blog/blog-1.png" alt="Blog image" class="img-fluid">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.html">Reasons To Choose AngularJS Software Development
+                                <h5><a href="blog-single.php">Reasons To Choose AngularJS Software Development
                                         Project</a></h5>
                                 <p>
                                     Choosing the right platform for our new project has always been a difficult ...
                                 </p>
-                                <a href="blog-single.html" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
+                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
-                                <a href="blog-single.html">
+                                <a href="blog-single.php">
                                     <img src="img/blog/blog-2.jpg" alt="Blog image" class="img-fluid">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.html">How to Maintain Ranking in 2019 After The New Google
+                                <h5><a href="blog-single.php">How to Maintain Ranking in 2019 After The New Google
                                         Update</a></h5>
                                 <p>
                                     Do you know that Google constantly changes its algorithm? Yes, it is true! Keep ...
                                 </p>
-                                <a href="blog-single.html" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
+                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
-                                <a href="blog-single.html">
+                                <a href="blog-single.php">
                                     <img src="img/blog/blog-3.png" alt="Blog image" class="img-fluid">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.html">Create A Successful Facebook Ad Campaign For Your
+                                <h5><a href="blog-single.php">Create A Successful Facebook Ad Campaign For Your
                                         Business</a></h5>
                                 <p>
                                     Every day millions of people scrawl on scrawl over the Facebook news feed and ...
                                 </p>
-                                <a href="blog-single.html" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
+                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
-                                <a href="blog-single.html">
+                                <a href="blog-single.php">
                                     <img src="img/blog/blog-4.png" alt="Blog image" class="img-fluid">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.html">Choose Best Python Version For Your Upcoming Projects</a>
+                                <h5><a href="blog-single.php">Choose Best Python Version For Your Upcoming Projects</a>
                                 </h5>
                                 <p>
                                     Let’s start with technical terms to describe Python – It is an ...
                                 </p>
-                                <a href="blog-single.html" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
+                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
-                                <a href="blog-single.html">
+                                <a href="blog-single.php">
                                     <img src="img/blog/blog-5.png" alt="Blog image" class="img-fluid">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.html">Best Reasons To Choose PPC For Your Business Success.</a>
+                                <h5><a href="blog-single.php">Best Reasons To Choose PPC For Your Business Success.</a>
                                 </h5>
                                 <p>
                                     Want to dive deep inside the Search Engine Optimization techniques? So, here I ...
                                 </p>
-                                <a href="blog-single.html" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
+                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
-                                <a href="blog-single.html">
+                                <a href="blog-single.php">
                                     <img src="img/blog/blog-6.png" alt="Blog image" class="img-fluid">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.html">Why Should You Use Shopify As Your Online Store
+                                <h5><a href="blog-single.php">Why Should You Use Shopify As Your Online Store
                                         Builder?</a></h5>
                                 <p>
                                     If you’re wondering what is Shopify? Here I am writing a short and clear answer for
                                     you!
                                 </p>
-                                <a href="blog-single.html" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
+                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -890,7 +890,7 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d214.33569889690486!2d76.71588791442312!3d30.736073571237863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a8c9d462a6f51e1!2sRG%20STARTUP%20-%20Web%20Solution%20Company%2CWebsite%20Designing%2C%20SEO%20Service%2C%20App%20Development%2C%20Digital%20Marketing%20Company%20in%20Mohali%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1582440016657!5m2!1sen!2sin" style="border:0;" allowfullscreen="" width="100%" height="300" frameborder="0"></iframe>
                         <!-- </div>
 <div class="col-lg-6 col-md-12 contact-form-wrap">
-<form id="contactForm" action="https://aipthemes.com/agencyou/index-parallax.html" method="get">
+<form id="contactForm" action="https://aipthemes.com/agencyou/index-parallax.php" method="get">
 <div class="row">
 <div class="col-md-6">
 <div class="form-group">

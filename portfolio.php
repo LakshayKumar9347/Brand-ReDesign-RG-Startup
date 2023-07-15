@@ -3,8 +3,8 @@
 
 <head>
     <!--! sus  -->
-    <!-- <style>
-        .gallery-Button li {
+    <style>
+        /* .gallery-Button li {
             background-color: #3240c3;
             border-radius: 50px;
             padding: 12px 25px;
@@ -13,22 +13,22 @@
             display: inline-block;
             margin: 0 10px;
             cursor: pointer;
-        }
+        } */
 
-        .gallery-Button li:active {
-            background-color: #13194f;
+        /* .gallery-Button li:active { */
+        /* background-color: #13194f;
         }
 
         .container .gallery-Button {
             margin-bottom: 30px;
-        }
+        } */
 
-        .thumb a {
+        /* .thumb a {
             overflow: hidden;
             display: block;
             height: 195px;
-        }
-    </style> -->
+        } */
+    </style>
     <?php
     include './components/headLinks.php';
     ?>
@@ -62,10 +62,11 @@
     </style>
     <!-- ! styling for filtering image -->
     <style>
-      .main {
+        .main {
             max-width: 1000px;
             margin: auto;
         }
+
         .row {
             margin: 10px -16px;
         }
@@ -173,7 +174,7 @@
         </p>
         <div class="main">
             <hr>
-            <div id="myBtnContainer">
+            <div id="myDIV">
                 <button class="btn active" onclick="filterSelection('all')">ALL</button>
                 <button class="btn" onclick="filterSelection('web-d')">WEB DESIGNING</button>
                 <button class="btn" onclick="filterSelection('logo-d')">LOGO DESIGNING</button>
@@ -181,16 +182,370 @@
                 <button class="btn" onclick="filterSelection('visiting-c')">VISITING CARD</button>
             </div>
             <!-- Portfolio Gallery Grid -->
-            <div class="row">
-                <div class="column web-d">
-                    <div class="content">
-                        <img src="./img/portfolio/1ExpressSolution.png" alt="Mountains" style="width:100%">
-                        <h6>Mountains</h6>
+            <div class="row gallery">
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img (1).png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img (1).png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Saira's Cooking</h6>
                     </div>
                 </div>
-               
-                <!-- END GRID -->
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img (2).png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img (2).png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>MG Int. Visa Consultancy</h6>
+                    </div>
+                </div>
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img (3).png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img (3).png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Pandit Eshwar Ji</h6>
+                    </div>
+                </div>
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img (4).png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img (4).png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Teespring</h6>
+                    </div>
+                </div>
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img (5).png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img (5).png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Prime Exodus</h6>
+                    </div>
+                </div>
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img (6).png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img (6).png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>1 Express Solutions</h6>
+                    </div>
+                </div>
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img(7).png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img(7).png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Prime Exodus</h6>
+                    </div>
+                </div>
+                <div class="column web-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img(8).jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img(8).jpg"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>SSL Certificate</h6>
+                    </div>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/img(9).jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/img(9).jpg"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Multi Store</h6>
+                    </div>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/multi-store.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/multi-store.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Multi Store (Mohali)</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/prime-exodus.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/prime-exodus.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Prime Exodus</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/mother-day.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/mother-day.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Cake N Creams</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/lucky-tent-house.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/lucky-tent-house.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Lucky Tent House</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/washing-machine.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/washing-machine.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Unique Dry Cleaners</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/eledant.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/eledant.jpg"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Eledent Aligners</h6>
+                    </div>
+                </div>
+                <div class="column banner-dthumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/aarav.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/aarav.jpg"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Aarav Group</h6>
+                    </div>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/summer.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/summer.jpg"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Summer is Coming</h6>
+                    </div>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/summer2018.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/summer2018.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Summer 2018</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column banner-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/summer2018Collection.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/summer2018Collection.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>2018 Summer Collections</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/organic.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/organic.png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Organic Vegetables Farming</h6>
+                    </div>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/1ExpressSolution.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/1ExpressSolution.png"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>1 Express Solutions</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/MG.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/MG.png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>MG Int. Visa Consultancy</h6>
+                    </div>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/pandit-fast-and.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/pandit-fast-and.png"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Pandit Eshwar Ji</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/unique-dry.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/unique-dry.png"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Unique Dry Cleaners</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/aakash-hope.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/aakash-hope.png"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>The Aakash Hope</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/prime-exodus-logo-white.png">
+                            <figure><img class="img-fluid img-thumbnail"
+                                    src="./img/portfolio/prime-exodus-logo-white.png" alt="Random Image">
+                            </figure>
+                            <h6>Prime Exodus</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/a-class.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/a-class.png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>A Class Garments</h6>
+                    </div>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/neo-cleaner.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/neo-cleaner.png"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Neo Cleaners</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/JG.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/JG.png"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>JG Quartz and Optical</h6>
+                    </div>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/Ietoo.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/Ietoo.jpg"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>IETOO Pharmaceuticals</h6>
+                    </div>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/code-dreamz.png">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/code-dreamz.png"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Code Dreamz</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column logo-d thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/fit-axis.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/fit-axis.jpg"
+                                    alt="Random Image">
+                            </figure>
+                        </a>
+                        <h6>Fit Axis</h6>
+                    </div>
+                </div>
+                <div class="column visiting-c thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/aClass-Custromer.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/aClass-Custromer.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>A Class Garments</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column visiting-c thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/gian-barsana.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/gian-barsana.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>A Class Garments</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column visiting-c thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/unique-dry-all-type.jpg">
+                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/unique-dry-all-type.jpg"
+                                    alt="Random Image">
+                            </figure>
+                            <h6>Unique Dry Cleaners</h6>
+                    </div>
+                    </a>
+                </div>
+                <div class="column visiting-c thumb">
+                    <div class='content'>
+                        <a href="./img/portfolio/unique-dry-rahul-kanoj.jpg">
+                            <figure><img class="img-fluid img-thumbnail"
+                                    src="./img/portfolio/unique-dry-rahul-kanoj.jpg" alt="Random Image">
+                            </figure>
+                            <h6>Unique Dry Cleaners</h6>
+                    </div>
+                    </a>
+                </div>
             </div>
+
+        </div>
         </div>
     </section>
     <!-- Gallery Section -->
@@ -225,7 +580,7 @@ include './components/jqueryScripts.php';
         });
     </script>
     <!--todo Custome scripts for Image Filtering -->
-    
+
 
     <script>
         filterSelection("all")
@@ -234,12 +589,12 @@ include './components/jqueryScripts.php';
             x = document.getElementsByClassName("column");
             if (c == "all") c = "";
             for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
             }
         }
 
-        function w3AddClass(element, name) {
+        function AddClass(element, name) {
             var i, arr1, arr2;
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
@@ -248,7 +603,7 @@ include './components/jqueryScripts.php';
             }
         }
 
-        function w3RemoveClass(element, name) {
+        function RemoveClass(element, name) {
             var i, arr1, arr2;
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
@@ -259,11 +614,9 @@ include './components/jqueryScripts.php';
             }
             element.className = arr1.join(" ");
         }
-
-
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
+      // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function () {
                 var current = document.getElementsByClassName("active");
@@ -271,6 +624,7 @@ include './components/jqueryScripts.php';
                 this.className += " active";
             });
         }
+
     </script>
     <!--todo Custome scripts for Image Filtering -->
 

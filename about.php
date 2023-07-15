@@ -69,7 +69,7 @@
                                 for your business or start-ups.</p>
                             <ul class="breadcrumb-links">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
                                 <li class="active">
                                     About Us

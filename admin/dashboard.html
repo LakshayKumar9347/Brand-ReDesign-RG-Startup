@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blog Panel</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+</head>
+
+<body class="bg-dark text-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Create Your Blogs</span>
+            </div>
+            <button style="margin: 0 25px;" onclick="logOut()" class="btn btn-danger">SignOut</button>
+        </nav>
+    </header>
+    <!--main  -->
+    <h3 class="text-center">Write a Blog</h3>
+    <div class="container">
+        <form action="http://localhost:3000/blogs" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Blog Title</label>
+                <input style="padding: 20px 20px;" id="title" name="title" type="text" class="form-control"
+                    placeholder="title...">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Blog Description</label>
+                <textarea class="form-control" id="description" name="description" rows="7"
+                    placeholder="description..."></textarea>
+
+            </div>
+            <div class="mb-3">
+                <h5>Upload Image</h5>
+                <input type="file" id="image" name="image">
+            </div>
+            <button type="submit" class="btn btn-warning ">Post Your BLog</button>
+        </form>
+    </div>
+    <!--main  -->
+
+
+    <!-- !Custome script to check session is there or not  -->
+    <script>
+        if (sessionStorage.getItem('loginStatus') === 'Login Successful NODEJS') {
+            console.log('Access granted to the dashboard');
+        } else {
+            console.log('Access denied to the dashboard');
+            window.location.href = 'index.html';
+        }
+    </script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function logOut() {
+            sessionStorage.clear()
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

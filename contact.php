@@ -62,7 +62,7 @@
                             <h1>Contact Us</h1>
                             <ul class="breadcrumb-links">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
                                 <li class="active">
                                     Contact Us
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 contact-form-wrap">
-                        <form id="contactForm" action="https://aipthemes.com/agencyou/index-parallax.html" method="get">
+                        <form id="contactForm" action="https://aipthemes.com/agencyou/index-parallax.php" method="get">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">

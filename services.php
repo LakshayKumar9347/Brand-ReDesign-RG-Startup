@@ -51,7 +51,7 @@
             <div id="nav-menu-wrap">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg p-0">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="index.php">
                             <img src="img/bg/logo_white.png" alt="Logo White" class="img-fluid logo-transparent">
                             <img src="img/bg/logo_black.png" alt="Logo White" class="img-fluid logo-normal">
                         </a>
@@ -65,10 +65,10 @@
                         <div class="collapse navbar-collapse main-menu justify-content-end" id="fixedNavbar">
                             <ul class="navbar-nav"> 
                                 <li class="nav-item">
-                                    <a class="nav-link menu-link" href="about.html">About</a>
+                                    <a class="nav-link menu-link" href="about.php">About</a>
                                 </li> 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="services.html" id="blogDropdownMenu" role="button" 
+                                    <a class="nav-link dropdown-toggle" href="services.php" id="blogDropdownMenu" role="button" 
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Services
                                     </a>
@@ -85,20 +85,20 @@
                                     <a class="nav-link menu-link" href="#">Client Reviews</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="blogDropdownMenu" role="button" 
+                                    <a class="nav-link dropdown-toggle" href="blog.php" id="blogDropdownMenu" role="button" 
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Blog
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="blogDropdownMenu"> 
-                                        <a class="dropdown-item" href="blog.html">Blog</a>
-                                        <a class="dropdown-item" href="blog-single.html">Blog Single</a>
+                                        <a class="dropdown-item" href="blog.php">Blog</a>
+                                        <a class="dropdown-item" href="blog-single.php">Blog Single</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link menu-link" href="#">Portfolio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link menu-link" href="contact.html">Contact</a>
+                                    <a class="nav-link menu-link" href="contact.php">Contact</a>
                                 </li>
                                 <li class="nav-item navbar-btn-resp d-flex align-items-center">
                                     <a href="#" class="primary-button">Get A Quote<i class="fa fa-arrow-right ml-3"></i></a>
@@ -120,7 +120,7 @@
                             <h1>Our Services</h1>
                             <ul class="breadcrumb-links">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
                                 <li class="active">
                                     Our Services
@@ -290,7 +290,7 @@
                                       <li><a href="tel:6239125514">+91-6239125514</a></li> 
                                     </ul>
                                     <p>We're Available 24/7. Call Now. </p>
-                                    <form action="https://aipthemes.com/agencyou/index-1.html">
+                                    <form action="https://aipthemes.com/agencyou/index-1.php">
                                         <div class="form-group newsletter-form-group">
                                             <input type="text" name="newsletter_email" autocomplete="off" required class="newsletter-form-control" placeholder="E-mail">
                                             <span class="far fa-envelope-open"></span>

@@ -17,7 +17,7 @@
                         <h1>Content Marketing</h1>
                         <ul class="breadcrumb-links">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="index.php">Home</a>
                             </li>
                             <li class="active">
                                 About
