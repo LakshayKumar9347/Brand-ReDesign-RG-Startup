@@ -2,33 +2,6 @@
 <html lang="en">
 
 <head>
-    <!--! sus  -->
-    <style>
-        /* .gallery-Button li {
-            background-color: #3240c3;
-            border-radius: 50px;
-            padding: 12px 25px;
-            color: white;
-            margin: 0 10px;
-            display: inline-block;
-            margin: 0 10px;
-            cursor: pointer;
-        } */
-
-        /* .gallery-Button li:active { */
-        /* background-color: #13194f;
-        }
-
-        .container .gallery-Button {
-            margin-bottom: 30px;
-        } */
-
-        /* .thumb a {
-            overflow: hidden;
-            display: block;
-            height: 195px;
-        } */
-    </style>
     <?php
     include './components/headLinks.php';
     ?>
@@ -43,11 +16,14 @@
         }
 
         .thumb {
-            margin-bottom: 15px;
+            margin-bottom: 100px;
+            width: 100%;
+            height: 253px;
+            padding: 40px;
         }
 
         .thumb:last-child {
-            margin-bottom: 0;
+            margin-bottom: 100px;
         }
 
         .thumb figure img {
@@ -58,6 +34,13 @@
         .thumb figure:hover img {
             -webkit-filter: grayscale(0);
             filter: grayscale(0);
+        }
+
+        .content img {
+            width: 100%;
+            height: 253px;
+            object-fit: cover;
+            ;
         }
     </style>
     <!-- ! styling for filtering image -->
@@ -111,13 +94,16 @@
             background-color: white;
             cursor: pointer;
         }
-
+        .currentActive:active{
+            background-color: #a2ca1d;
+            color: white;
+        }
         .btn:hover {
             background-color: #ddd;
         }
 
-        .btn.active {
-            background-color: #666;
+        .btn:active {
+            background-color: #ac3636;
             color: white;
         }
     </style>
@@ -175,7 +161,8 @@
         <div class="main">
             <hr>
             <div id="myDIV">
-                <button class="btn active" onclick="filterSelection('all')">ALL</button>
+                <!-- <button class="btn active">test</button> -->
+                <button class="btn currentActive" onclick="filterSelection('all')">ALL</button>
                 <button class="btn" onclick="filterSelection('web-d')">WEB DESIGNING</button>
                 <button class="btn" onclick="filterSelection('logo-d')">LOGO DESIGNING</button>
                 <button class="btn" onclick="filterSelection('banner-d')">BANNER DESIGNING</button>
@@ -279,9 +266,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/multi-store.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>Multi Store (Mohali)</h6>
+                        </a>
+                        <h6>Multi Store (Mohali)</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column banner-d thumb">
                     <div class='content'>
@@ -289,9 +276,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/prime-exodus.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>Prime Exodus</h6>
+                        </a>
+                        <h6>Prime Exodus</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column banner-d thumb">
                     <div class='content'>
@@ -299,9 +286,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/mother-day.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>Cake N Creams</h6>
+                        </a>
+                        <h6>Cake N Creams</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column banner-d thumb">
                     <div class='content'>
@@ -309,9 +296,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/lucky-tent-house.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>Lucky Tent House</h6>
+                        </a>
+                        <h6>Lucky Tent House</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column banner-d thumb">
                     <div class='content'>
@@ -319,9 +306,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/washing-machine.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>Unique Dry Cleaners</h6>
+                        </a>
+                        <h6>Unique Dry Cleaners</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column banner-d thumb">
                     <div class='content'>
@@ -333,7 +320,7 @@
                         <h6>Eledent Aligners</h6>
                     </div>
                 </div>
-                <div class="column banner-dthumb">
+                <div class="column banner-d thumb">
                     <div class='content'>
                         <a href="./img/portfolio/aarav.jpg">
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/aarav.jpg"
@@ -346,7 +333,8 @@
                 <div class="column banner-d thumb">
                     <div class='content'>
                         <a href="./img/portfolio/summer.jpg">
-                            <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/summer.jpg"
+                            <figure>
+                                <img class="img-fluid img-thumbnail" src="./img/portfolio/summer.jpg"
                                     alt="Random Image">
                             </figure>
                         </a>
@@ -359,9 +347,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/summer2018.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>Summer 2018</h6>
+                        </a>
+                        <h6>Summer 2018</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column banner-d thumb">
                     <div class='content'>
@@ -369,9 +357,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/summer2018Collection.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>2018 Summer Collections</h6>
+                        </a>
+                        <h6>2018 Summer Collections</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -389,9 +377,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/1ExpressSolution.png"
                                     alt="Random Image">
                             </figure>
-                            <h6>1 Express Solutions</h6>
+                        </a>
+                        <h6>1 Express Solutions</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -409,9 +397,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/pandit-fast-and.png"
                                     alt="Random Image">
                             </figure>
-                            <h6>Pandit Eshwar Ji</h6>
+                        </a>
+                        <h6>Pandit Eshwar Ji</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -419,9 +407,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/unique-dry.png"
                                     alt="Random Image">
                             </figure>
-                            <h6>Unique Dry Cleaners</h6>
+                        </a>
+                        <h6>Unique Dry Cleaners</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -429,9 +417,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/aakash-hope.png"
                                     alt="Random Image">
                             </figure>
-                            <h6>The Aakash Hope</h6>
+                        </a>
+                        <h6>The Aakash Hope</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -439,9 +427,9 @@
                             <figure><img class="img-fluid img-thumbnail"
                                     src="./img/portfolio/prime-exodus-logo-white.png" alt="Random Image">
                             </figure>
-                            <h6>Prime Exodus</h6>
+                        </a>
+                        <h6>Prime Exodus</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -459,9 +447,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/neo-cleaner.png"
                                     alt="Random Image">
                             </figure>
-                            <h6>Neo Cleaners</h6>
+                        </a>
+                        <h6>Neo Cleaners</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -489,9 +477,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/code-dreamz.png"
                                     alt="Random Image">
                             </figure>
-                            <h6>Code Dreamz</h6>
+                        </a>
+                        <h6>Code Dreamz</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column logo-d thumb">
                     <div class='content'>
@@ -509,9 +497,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/aClass-Custromer.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>A Class Garments</h6>
+                        </a>
+                        <h6>A Class Garments</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column visiting-c thumb">
                     <div class='content'>
@@ -519,9 +507,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/gian-barsana.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>A Class Garments</h6>
+                        </a>
+                        <h6>A Class Garments</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column visiting-c thumb">
                     <div class='content'>
@@ -529,9 +517,9 @@
                             <figure><img class="img-fluid img-thumbnail" src="./img/portfolio/unique-dry-all-type.jpg"
                                     alt="Random Image">
                             </figure>
-                            <h6>Unique Dry Cleaners</h6>
+                        </a>
+                        <h6>Unique Dry Cleaners</h6>
                     </div>
-                    </a>
                 </div>
                 <div class="column visiting-c thumb">
                     <div class='content'>
@@ -539,9 +527,9 @@
                             <figure><img class="img-fluid img-thumbnail"
                                     src="./img/portfolio/unique-dry-rahul-kanoj.jpg" alt="Random Image">
                             </figure>
-                            <h6>Unique Dry Cleaners</h6>
+                        </a>
+                        <h6>Unique Dry Cleaners</h6>
                     </div>
-                    </a>
                 </div>
             </div>
 
@@ -614,7 +602,7 @@ include './components/jqueryScripts.php';
             }
             element.className = arr1.join(" ");
         }
-      // Add active class to the current button (highlight it)
+        // Add active class to the current button (highlight it)
         var header = document.getElementById("myDIV");
         var btns = header.getElementsByClassName("btn");
         for (var i = 0; i < btns.length; i++) {

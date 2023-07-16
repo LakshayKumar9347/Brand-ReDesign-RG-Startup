@@ -54,51 +54,84 @@
                 <div class="row">
                     <!--!  -->
                     <?php
-                $blogID = $_SERVER['QUERY_STRING'];
-                $apiEndpoint = "http://localhost:3000/api/blogs/{$blogID}";                
-                $blogData = file_get_contents($apiEndpoint);
-                if ($blogData !== false) {
-                  $blog = json_decode($blogData, true);
-                  // Process the fetched blog data
-                  if ($blog !== null) {
-                    // Blog found, access the data
-                    $title = $blog['title'];
-                    $description = $blog['description'];
-                    $image = $blog['image'];
-                    // ...
-                    // Process the blog data as needed
-                  } else {
-                    // Invalid response or error occurred
-                    echo "Failed to fetch blog with blogID: {$blogID}";
-                  }
-                } else {
-                  // Error occurred while making the request
-                  echo "Error occurred while fetching the blog";
-                }
-                ?>
-             
+$blogID = $_SERVER['QUERY_STRING'];
+$apiEndpoint = "http://localhost:3000/api/blogs/{$blogID}";
+
+if (empty($blogID) || !blogExists($apiEndpoint)) {
+    // Query string is empty or blog with given ID doesn't exist
+    // Fetch all blogs and render the latest one
+    $apiEndpointAll = "http://localhost:3000/api/blogs";
+    $allBlogData = file_get_contents($apiEndpointAll);
+    if ($allBlogData !== false) {
+        $blogs = json_decode($allBlogData, true);
+        if (!empty($blogs)) {
+            $latestBlog = array_reverse($blogs)[0];
+            $title = $latestBlog['title'];
+            $description = $latestBlog['description'];
+            $image = $latestBlog['image'];
+            // ...
+            // Process the blog data as needed
+        } else {
+            // No blogs found
+            echo "No blogs available.";
+        }
+    } else {
+        // Error occurred while making the request
+        echo "Error occurred while fetching the blogs.";
+    }
+} else {
+    // Blog with given ID exists
+    $blogData = file_get_contents($apiEndpoint);
+    if ($blogData !== false) {
+        $blog = json_decode($blogData, true);
+        if ($blog !== null) {
+            $title = $blog['title'];
+            $description = $blog['description'];
+            $image = $blog['image'];
+            // ...
+            // Process the blog data as needed
+        } else {
+            // Invalid response or error occurred
+            echo "Failed to fetch blog with blogID: {$blogID}";
+        }
+    } else {
+        // Error occurred while making the request
+        echo "Error occurred while fetching the blog";
+    }
+}
+
+function blogExists($apiEndpoint)
+{
+    $response = @file_get_contents($apiEndpoint);
+    return ($response !== false);
+}
+?>
+
                     <!--!  -->
                     <div class="col-lg-8">
                         <div class="blog-post-single">
                             <div class="blog-post-img">
-                                <img src="http://localhost:3000/uploads/<?php  echo $image ?>" alt="Blog Post Image" class="img-fluid">
+                                <img src="http://localhost:3000/uploads/<?php  echo $image ?>" alt="Blog Post Image"
+                                    class="img-fluid">
                             </div>
                             <div class="blog-text">
-                                <h4><?php  echo $title ?></h4>
+                                <h4>
+                                    <?php  echo $title ?>
+                                </h4>
                                 <div class="author-meta">
                                     <a href="#"><span class="far fa-calendar-alt"></span>April 10</a>
                                     <a href="#"><span class="far fa-user"></span>By Admin</a>
                                 </div>
                                 <p>
-                                <?php  echo $description ?>
+                                    <?php  echo $description ?>
                                 </p>
                                 <blockquote>
                                     <q>
-                                    <?php  echo $description ?>
+                                        <?php  echo $description ?>
                                     </q>
                                 </blockquote>
                                 <p>
-                                <?php  echo $description ?>
+                                    <?php  echo $description ?>
                                 </p>
                                 <div class="comments-wrap">
                                     <h5 class="inner-header-title">Comments (4)</h5>
@@ -204,6 +237,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- right section bar -->
+
+
                     <div class="col-lg-4">
                         <div class="blog-sidebar">
                             <div class="blog-widgets">
@@ -220,124 +256,84 @@
                                 <h5 class="inner-header-title">Category</h5>
                                 <ul class="blog-category-list clearfix">
                                     <li>
-                                        <a href="#">Business<span class="category-count">(10)</span></a>
+                                        <a href="./blog.php">App Development<span class="category-count">(10)</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Design<span class="category-count">(18)</span></a>
+                                        <a href="./blog.php">Web Designing<span class="category-count">(18)</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Agency<span class="category-count">(5)</span></a>
+                                        <a href="./blog.php">Web Development<span class="category-count">(5)</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Python<span class="category-count">(22)</span></a>
+                                        <a href="./blog.php">Mobile App Development<span
+                                                class="category-count">(22)</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Javascript<span class="category-count">(19)</span></a>
+                                        <a href="./blog.php">Digital Marketing<span
+                                                class="category-count">(19)</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">JQuery<span class="category-count">(19)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="blog-widgets">
-                                <h5 class="inner-header-title">Archives</h5>
-                                <ul class="blog-archive-list clearfix">
-                                    <li>
-                                        <a href="#">April 2019</a>
+                                        <a href="./blog.php">SEO & SMO Services<span
+                                                class="category-count">(19)</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">October 2019</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">November 2019</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">December 2019</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">January 2020</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="blog-widgets">
-                                <h5 class="inner-header-title">Recent Post</h5>
-                                <div class="recent-post-item clearfix">
-                                    <div class="recent-post-img mr-3">
-                                        <a href="#">
-                                            <img class="img-fluid" src="img/blog/recent-blog-img-1.jpg"
-                                                alt="Recent Img">
-                                        </a>
-                                    </div>
-                                    <div class="recent-post-body">
-                                        <a href="blog-single.php">
-                                            <h6 class="recent-post-title">2020 Free WordPress Themes</h6>
-                                        </a>
-                                        <p class="recent-post-date"><i class="far fa-calendar-alt"></i>05 May, 2020</p>
-                                    </div>
-                                </div>
-                                <div class="recent-post-item clearfix">
-                                    <div class="recent-post-img mr-3">
-                                        <a href="#">
-                                            <img class="img-fluid" src="img/blog/recent-blog-img-2.jpg"
-                                                alt="Recent Img">
-                                        </a>
-                                    </div>
-                                    <div class="recent-post-body">
-                                        <a href="blog-single.php">
-                                            <h6 class="recent-post-title">Best UI Element Wireframe Packages</h6>
-                                        </a>
-                                        <p class="recent-post-date"><i class="far fa-calendar-alt"></i>12 March, 2020
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="recent-post-item clearfix">
-                                    <div class="recent-post-img mr-3">
-                                        <a href="#">
-                                            <img class="img-fluid" src="img/blog/recent-blog-img-3.jpg"
-                                                alt="Recent Img">
-                                        </a>
-                                    </div>
-                                    <div class="recent-post-body">
-                                        <a href="blog-single.php">
-                                            <h6 class="recent-post-title">New Business Ventures And Marketing</h6>
-                                        </a>
-                                        <span class="recent-post-date"><i class="far fa-calendar-alt"></i>March 10,
-                                            2019</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog-widgets tag-widgets">
-                                <h5 class="inner-header-title">Tags</h5>
-                                <ul class="blog-tags clearfix">
-                                    <li>
-                                        <a href="#" class="active">Business</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Php</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Javascript</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Python</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">JQuery</a>
+                                        <a href="./blog.php">PPC<span class="category-count">(13)</span></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="blog-widgets" style="margin-top: 30px;">
+                            <h5 class="inner-header-title">Recent Post</h5>
+
+
+                            <!-- integrate php -->
+                               <?php
+$data = file_get_contents('http://localhost:3000/api/blogs');
+$blogs = json_decode($data, true);
+$latestBlogs = array_reverse($blogs);
+$limitedBlogs = array_slice($latestBlogs, 0, 3);
+foreach ($limitedBlogs as $blog) {
+    $blogID = $blog['_id'];
+    $title = $blog['title'];
+    $description = $blog['description'];
+    $image = $blog['image'];
+
+    $recentPostCard =
+        '<div class="recent-post-item clearfix">
+            <div class="recent-post-img mr-3">
+                <a href=""blog-single.php?'. $blogID  .   '"">
+                    <img class="img-fluid" src="http://localhost:3000/uploads/' . $image . '" alt="Recent Img">
+                </a>
+            </div>
+            <div class="recent-post-body">
+                <a href="blog-single.php?'. $blogID  .   '">
+                    <h6 class="recent-post-title">' . $title . '</h6>
+                </a>
+                <p class="recent-post-date"><i class="far fa-calendar-alt"></i>05 May, 2020</p>
+            </div>
+        </div>';
+
+    echo $recentPostCard;
+}
+?>
+
                 </div>
             </div>
-        </section>
-        <!--// Blog Single End //-->
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!--// Blog Single End //-->
 
-        <!--// Footer Start //-->
-        <?php
-    include './components/footer.php' 
-    ?>
-        <!--// Footer End //-->
+
+
+    <!--// Footer Start //-->
+    <?php
+                include './components/footer.php' 
+            ?>
+    <!--// Footer End //-->
 
     </div>
     <!--// Page Wrapper End //-->

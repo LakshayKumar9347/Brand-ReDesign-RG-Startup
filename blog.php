@@ -10,6 +10,11 @@
     ?>
 
     <title>Blog</title>
+    <style>
+        .blog-card{
+            height:575px
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target="#fixedNavbar">
@@ -53,14 +58,22 @@
         <?php
 $data = file_get_contents('http://localhost:3000/api/blogs');
 $blogs = json_decode($data, true);
-$latestBlogs = array_reverse($blogs); // Reverse the $blogs array
+$latestBlogs = array_reverse($blogs); 
 
 foreach ($latestBlogs as $blog) {
     $blogID = $blog['_id'];
     $title = $blog['title'];
     $description = $blog['description'];
     $image = $blog['image'];
-    // Rest of your code for processing each blog entry
+    
+       // Slice title to 4 words
+       $titleWords = explode(' ', $title);
+       $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
+   
+       // Slice description to 18 words
+       $descriptionWords = explode(' ', $description);
+       $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
+   
 
 
     $blogCard = '
@@ -68,12 +81,12 @@ foreach ($latestBlogs as $blog) {
     <div class="blog-card">
         <div class="img">
             <a href="blog-single.php?' . urlencode($blogID) . '">
-                <img src="http://localhost:3000/uploads/' . $image . '" alt="Blog image" class="img-fluid">
+                <img  class="img-fluid" src="http://localhost:3000/uploads/' . $image . '" alt="Blog image" style="width: 100%; height: 200px;object-fit: cover;">
             </a>
         </div>
         <div class="body">
-            <h5><a href="blog-single.php?' . urlencode($blogID) . '">' . $title . '</a></h5>
-            <p>' . $description . '</p>
+            <h5><a href="blog-single.php?' . urlencode($blogID) . '">' . $slicedTitle . '</a></h5>
+            <p>' . $slicedDescription . '</p>
             <a href="blog-single.php?' . urlencode($blogID) . '" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
         </div>
     </div>
@@ -97,22 +110,6 @@ foreach ($latestBlogs as $blog) {
     </section>
         <!--php title and desc integraitnio  -->
         <!--// Blog Grid End //-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <!--// Footer Start //-->

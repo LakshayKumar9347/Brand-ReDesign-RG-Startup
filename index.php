@@ -9,20 +9,29 @@
     ?>
     <!-- Including links head -->
     <title>RG Startup - Web Solution Company in Mohali</title>
+    <style>
+        .blog-card{
+            height:575px
+        }
+        .clients-card {
+  height: 570px;
+  margin-bottom: 53px;
+}
+    </style>
 </head>
 
 <body data-spy="scroll" data-target="#fixedNavbar">
-
-    <!--// Page Wrapper Start //-->
-    <div class="page-wrapper">
-
-        <!--! include header section -->
+    <!--! include header section -->
         <?php
         // Include the header file
         include './components/header.php';
         ?>
         <!--! include header section -->
 
+    <!--// Page Wrapper Start //-->
+    <div class="page-wrapper">
+
+    
 
         <!-- ! hero section -->
         <!--// Hero Section Start //-->
@@ -544,8 +553,8 @@
                             <div class="body">
                                 <p>
                                     This is the best and no.1 Website Designing Company in Mohali, really services are
-                                    affordable . Team was so comfortable to talk and they provides best Design services
-                                    clients are satisfied with RG Startup...
+                                    affordable . Team was so comfortable to talk and they provides best Design services to 
+                                    clients 
                                 </p>
                                 <span class="far fa-comment"></span>
                             </div>
@@ -731,110 +740,53 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="owl-theme owl-carousel" id="blogCarousel">
+                    <!--php title and desc integraitnio  -->
+        <?php
+$data = file_get_contents('http://localhost:3000/api/blogs');
+$blogs = json_decode($data, true);
+$latestBlogs = array_reverse($blogs); 
+$limitedBlogs = array_slice($latestBlogs, 0, 6);
+
+foreach ($limitedBlogs as $blog) {
+    $blogID = $blog['_id'];
+    $title = $blog['title'];
+    $description = $blog['description'];
+    $image = $blog['image'];
+    
+       // Slice title to 4 words
+       $titleWords = explode(' ', $title);
+       $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
+   
+       // Slice description to 18 words
+       $descriptionWords = explode(' ', $description);
+       $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
+   
+
+
+    $blogCard = '
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
                                 <a href="blog-single.php">
-                                    <img src="img/blog/blog-1.png" alt="Blog image" class="img-fluid">
+                                    <img src="http://localhost:3000/uploads/'. $image .'" alt="Blog image" class="img-fluid" style="width: 100%; height: 200px;object-fit: cover;">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.php">Reasons To Choose AngularJS Software Development
-                                        Project</a></h5>
+                                <h5><a href="blog-single.php">'. $slicedTitle .'</a></h5>
                                 <p>
-                                    Choosing the right platform for our new project has always been a difficult ...
+                                   '. $slicedDescription .'
                                 </p>
                                 <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-card">
-                            <div class="img">
-                                <a href="blog-single.php">
-                                    <img src="img/blog/blog-2.jpg" alt="Blog image" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="body">
-                                <h5><a href="blog-single.php">How to Maintain Ranking in 2019 After The New Google
-                                        Update</a></h5>
-                                <p>
-                                    Do you know that Google constantly changes its algorithm? Yes, it is true! Keep ...
-                                </p>
-                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-card">
-                            <div class="img">
-                                <a href="blog-single.php">
-                                    <img src="img/blog/blog-3.png" alt="Blog image" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="body">
-                                <h5><a href="blog-single.php">Create A Successful Facebook Ad Campaign For Your
-                                        Business</a></h5>
-                                <p>
-                                    Every day millions of people scrawl on scrawl over the Facebook news feed and ...
-                                </p>
-                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-card">
-                            <div class="img">
-                                <a href="blog-single.php">
-                                    <img src="img/blog/blog-4.png" alt="Blog image" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="body">
-                                <h5><a href="blog-single.php">Choose Best Python Version For Your Upcoming Projects</a>
-                                </h5>
-                                <p>
-                                    Let’s start with technical terms to describe Python – It is an ...
-                                </p>
-                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-card">
-                            <div class="img">
-                                <a href="blog-single.php">
-                                    <img src="img/blog/blog-5.png" alt="Blog image" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="body">
-                                <h5><a href="blog-single.php">Best Reasons To Choose PPC For Your Business Success.</a>
-                                </h5>
-                                <p>
-                                    Want to dive deep inside the Search Engine Optimization techniques? So, here I ...
-                                </p>
-                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-card">
-                            <div class="img">
-                                <a href="blog-single.php">
-                                    <img src="img/blog/blog-6.png" alt="Blog image" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="body">
-                                <h5><a href="blog-single.php">Why Should You Use Shopify As Your Online Store
-                                        Builder?</a></h5>
-                                <p>
-                                    If you’re wondering what is Shopify? Here I am writing a short and clear answer for
-                                    you!
-                                </p>
-                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    </div>';
+
+                    echo $blogCard;
+}
+?>
+                    
                 </div>
             </div>
         </section>
@@ -888,52 +840,7 @@
                     <div class="map-part">
 
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d214.33569889690486!2d76.71588791442312!3d30.736073571237863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a8c9d462a6f51e1!2sRG%20STARTUP%20-%20Web%20Solution%20Company%2CWebsite%20Designing%2C%20SEO%20Service%2C%20App%20Development%2C%20Digital%20Marketing%20Company%20in%20Mohali%2C%20Chandigarh!5e0!3m2!1sen!2sin!4v1582440016657!5m2!1sen!2sin" style="border:0;" allowfullscreen="" width="100%" height="300" frameborder="0"></iframe>
-                        <!-- </div>
-<div class="col-lg-6 col-md-12 contact-form-wrap">
-<form id="contactForm" action="https://aipthemes.com/agencyou/index-parallax.php" method="get">
-<div class="row">
-<div class="col-md-6">
-<div class="form-group">
-<input type="text" class="contact-form-control" name="contact_name" id="contactName" required placeholder="Your Full Name *">
-<i class="far fa-user"></i>
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-group">
-<input type="text" class="contact-form-control" name="contact_email"  id="contactEmail" required placeholder="Your Email *">
-<i class="far fa-envelope"></i>
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-group">
-<input type="text" class="contact-form-control" name="contact_phone" id="contactPhone" required placeholder="Your Phone *">
-<i class="fas fa-mobile-alt"></i>
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-group">
-<select name="contact_subject" class="contact-form-control custom-select" id="contactSubject">
-<option value="Please Select">Please Select</option>
-<option value="Web Design">Web Design</option>
-<option value="Web Development">Web Development</option>
-<option value="Customer Support">Customer Support</option>
-</select>
-<i class="far fa-bookmark"></i>
-</div>
-</div>
-<div class="col-md-12">
-<div class="form-group">
-<textarea class="contact-form-control" name="contact_message" id="contactMessage" cols="30" rows="8" placeholder="Your Message *"></textarea>
-<i class="far fa-envelope-open"></i>
-</div>
-</div>
-<div class="col-md-12">
-<button type="submit" name="contact_btn" class="primary-button border-none">Send Message<i class="fa fa-arrow-right ml-3"></i></button> 
-</div>
-</div>
-</form>
-</div> -->
-                    </div>
+                        </div>
                 </div>
         </section>
         <!--// Contact Us End //-->
