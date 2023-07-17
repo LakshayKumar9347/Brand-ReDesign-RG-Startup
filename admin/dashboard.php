@@ -19,6 +19,8 @@
       <!-- Main Content -->
       <div class="dash-right">
         <h1>Welcome To<span class="span-color">Dashboard</span></h1>
+              <!-- carousel -->
+        <!--  -->
         <div class="row mt-4">
           <div class="col-lg-4 col-md-6">
             <div class="dash-card d-c-2">

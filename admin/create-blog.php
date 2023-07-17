@@ -22,12 +22,12 @@
         <div class="container">
         <form id="blogForm" enctype="multipart/form-data">
             <div class="mb-3">
-                <label class="form-label">Blog Title</label>
+                <h5 class="form-label">Blog Title</h5>
                 <input style="padding: 20px 20px;" id="title" name="title" type="text" class="form-control"
                     placeholder="title...">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Blog Description</label>
+                <h5 for="exampleFormControlTextarea1" class="form-label">Blog Description</h5>
                 <textarea class="form-control" id="description" name="description" rows="7"
                     placeholder="description..."></textarea>
 

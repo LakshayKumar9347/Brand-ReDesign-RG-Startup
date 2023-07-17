@@ -801,19 +801,19 @@
         <!--// Our Pricing End //-->
 
         <!--// Latest Blog Start //-->
-        <section class="section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section-heading">
-                            <h2 class="section-title">Latest<span>Blog</span></h2>
-                            <p>
-                                It is a long established fact that a reader will be distracted
-                                by the readable content..
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<section class="section">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="section-heading">
+                <h2 class="section-title">Latest<span>Blog</span></h2>
+                <p>
+                    It is a long established fact that a reader will be distracted
+                    by the readable content..
+                </p>
+            </div>
+        </div>
+    </div>
 
                 <div class="owl-theme owl-carousel" id="blogCarousel">
                     <!--php title and desc integraitnio  -->
@@ -828,7 +828,9 @@ foreach ($limitedBlogs as $blog) {
     $title = $blog['title'];
     $description = $blog['description'];
     $image = $blog['image'];
+    $status = $blog['status'];
     
+    if ($status === 'Published') {
        // Slice title to 4 words
        $titleWords = explode(' ', $title);
        $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
@@ -858,6 +860,7 @@ foreach ($limitedBlogs as $blog) {
                     </div>';
 
                     echo $blogCard;
+    }
 }
 ?>
 

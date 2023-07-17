@@ -53,6 +53,13 @@
         <section class="section">
         <div class="container">
             <div class="row">
+            <div class="section-heading">
+                <h2 class="section-title">Latest<span>Blog</span></h2>
+                <p>
+                    It is a long established fact that a reader will be distracted
+                    by the readable content..
+                </p>
+            </div>
 
         <!--php title and desc integraitnio  -->
         <?php
@@ -65,7 +72,9 @@ foreach ($latestBlogs as $blog) {
     $title = $blog['title'];
     $description = $blog['description'];
     $image = $blog['image'];
+    $status = $blog['status'];
     
+    if ($status === 'Published') {
        // Slice title to 4 words
        $titleWords = explode(' ', $title);
        $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
@@ -94,7 +103,7 @@ foreach ($latestBlogs as $blog) {
 
 
     echo $blogCard;
-}
+}}
 ?>
 
           </div>
