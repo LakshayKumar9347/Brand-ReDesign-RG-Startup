@@ -1,25 +1,26 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>Blog Panel</title>
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
+  <?php include './components/headLinks.php' ?>
+  <title>Dashboard </title>
 </head>
-<body class="bg-dark text-light">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Create Your Blogs</span>
-            </div>
-            <button style="margin: 0 25px;" onclick="logOut()" class="btn btn-danger">SignOut</button>
-        </nav>
-    </header>
-    <!--main  -->
-    <h3 class="text-center">Write a Blog</h3>
-    <div class="container">
-        <form action="http://localhost:3000/blogs" method="post" enctype="multipart/form-data">
+
+<body>
+  <!-- LEFT SIDE BAR -->
+  <div class="flex-part">
+    <!-- Left menu -->
+    <?php include './components/leftMenu.php' ?>
+
+    <div class="dash-body">
+      <!-- NavBar -->
+    <?php include './components/navBar.php' ?>
+
+      <!-- Main Content -->
+      <div class="dash-right">
+        <h1>Create <span class="span-color">Your Blog</span></h1>
+        <div class="container">
+        <form id="blogForm" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label">Blog Title</label>
                 <input style="padding: 20px 20px;" id="title" name="title" type="text" class="form-control"
@@ -50,26 +51,38 @@
             <button type="submit" class="btn btn-warning ">Post Your BLog</button>
         </form>
     </div>
-    <!--main  -->
+   
+      
+      </div>
+    </div>
+  </div>
+  <!-- js to prevent reload -->
+  <script>
+    document.getElementById("blogForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const formData = new FormData(this);
 
+        fetch("http://localhost:3000/blogs", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text(); // Parse the response body as text
+            } else {
+                throw new Error("An error occurred. Please try again later.");
+            }
+        })
+        .then(data => {
+            alert(data);
+            document.getElementById("blogForm").reset();
+        })
+        .catch(error => {
+            alert(error.message);
+        });
+    });
+</script>
 
-    <!-- !Custome script to check session is there or not  -->
-    <script>
-        if (sessionStorage.getItem('loginStatus') === 'Login Successful NODEJS') {
-            console.log('Access granted to the dashboard');
-        } else {
-            console.log('Access denied to the dashboard');
-            window.location.href = 'index.html';
-        }
-    </script>
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function logOut() {
-            sessionStorage.clear()
-            location.reload();
-        }
-    </script>
 </body>
 
 </html>

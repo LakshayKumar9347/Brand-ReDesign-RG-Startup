@@ -30,16 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($response === false) {
         echo 'Server Not Sending Any Response';
     } else {        
-        if ($response === 'Login Successful NODEJS') {
+        if ($response === 'Login! Successful') {
             $_SESSION["loginStatus"] = $response;
             echo '<script>
-            alert("Login success");
+            alert("'. $response .'");
             sessionStorage.setItem("loginStatus", ' . json_encode($response) . ');
-            window.location.href = "dashboard.html";
+            window.location.href = "dashboard.php";
             </script>';
         } else {
-            header('Location: index.html');
-            echo $response;
+            echo '<script>
+            alert("'. $response .'"); 
+            window.location.href = "index.html";
+            </script>';
         }
     }
     curl_close($curl);
