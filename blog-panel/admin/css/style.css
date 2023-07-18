@@ -1,0 +1,617 @@
+body{font-family: 'Poppins', sans-serif;}
+img{max-width:100%;}
+
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+#sidebar-container {
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 0;
+}
+a.list-group-item.mmmm {
+    border: none !important;
+    box-shadow: unset !important;
+}
+/* Sidebar sizes when expanded and expanded */
+.sidebar-expanded {
+    width: 300px;
+}
+.sidebar-collapsed {
+    width: 106px;
+}
+/* Menu item*/
+ 
+/* Separators */
+.sidebar-separator-title {
+    border: none;
+}
+ 
+.left-menu-bar .fa-angle-double-right:before, .fa-angles-right:before{display: none;}
+.left-menu-bar .fa-angle-double-left:before, .fa-angles-left:before{display: none;}
+img.fav-white {
+    display: none;
+}
+.sidebar-collapsed img.fav-white {
+    display: unset;
+} 
+.icons-part-left {
+    display: none;
+}
+.sidebar-collapsed .icons-part-left {
+    display: unset;
+}
+.sidebar-collapsed {
+    background: #208C84 !important;
+}
+.sidebar-collapsed  .list-group a { 
+    background: #208c84 !important;
+    border: none !important;
+}
+
+
+ 
+img.fav-white {
+    width: 33px;
+}
+ 
+
+
+.top-header {
+    background: #3247c8;
+    padding: 8px 15px;
+}
+
+
+.flex-part {
+    display: flex;
+} 
+.dash-body { 
+    width: 100%; 
+}
+ 
+ 
+ 
+.top-header button.btn-close {
+    position: absolute;
+    right: 14px;
+    opacity: 0.1;
+}
+img.off-logo {
+    width: 90%;
+    margin: 0 auto;
+}
+ .offcanvas-body {
+    padding: 0;
+}
+ 
+.nav-link   {
+    font-size: 20px;
+    line-height: 30px; 
+    color: #191919 !important;
+}
+.nav-link.active { 
+    color: #208C84 !important;
+}
+
+ul#myTab button {
+    border: navajowhite;
+    padding: 6px 10px;
+    background: #fff0;
+}
+ul#myTab button i.fa-solid.fa-user {
+    border: solid 2px;
+    padding: 4px;
+    border-radius: 100px;
+}
+ul#myTab {
+    background: #F2F2F2;
+    padding: 10px 10px;
+}
+.menu-part {
+    padding: 15px 0;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    max-width: 20%;
+    box-shadow: 0px 7px 6px 1px #d9d9d9;
+}
+ 
+img.left-logo {
+    margin: -12px 0 0 30px;
+}
+
+.menu-part .online-a a:hover {
+    color: #208C84 !important;
+}
+
+ul.menu-left {
+    margin-top: 30px;
+    padding: 0;
+}
+ul.menu-left  li {
+    list-style: none;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+ul.menu-left  li a:hover {
+    background: #e4f6ff;
+    border-left: solid 6px #3247c8;
+    color: #3247c8 !important;
+    font-weight: 600;
+}
+ul.menu-left  li a {
+    display: block;
+    padding: 6px 35px;
+    border-left: solid 6px #fff;
+    transition: 0.5s;
+    font-size: 18px;
+    line-height: 45.6px;
+    color:#191919;
+    text-decoration: none;
+}
+ul.menu-left li a i {
+    margin-right: 10px;
+}
+ 
+.offcanvas ::-webkit-scrollbar {
+  width: 1px !important;
+}
+ 
+.offcanvas ::-webkit-scrollbar-track {
+  background: #fff  !important;
+}
+ 
+.offcanvas ::-webkit-scrollbar-thumb {
+  background: #fff  !important;
+}
+ 
+.offcanvas ::-webkit-scrollbar-thumb:hover {
+  background: #fff  !important;
+}
+.offline-lawyers {
+    background: #E8F8F2;
+    padding: 8px 33px;
+}
+.offline-lawyers p {
+  margin: 0;
+  font-weight: 400;
+font-size: 16px;
+line-height: 24px;  
+color: #208C84;
+}
+div#profile p.name-uaser {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    color: #191919;
+}
+div#profile p.short-mes {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #191919;
+}
+
+
+nav.main-menu a.navbar-brand {
+    color: #fff;
+}
+nav.main-menu a.navbar-brand i {
+    margin-right: 15px;
+}
+ 
+nav.main-menu a.navbar-brand {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+}
+.main-menu a:hover {
+    color: #fff !important;
+}
+
+.main-menu ul.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 13px 18px !important;
+}
+.round-user {
+    position: relative;
+}
+.round-user .round {
+    width: 14px;
+    height: 14px;
+    background: #3DC9A1;
+    position: absolute;
+    right: 4px;
+    border-radius: 100px;
+    bottom: -6px;
+}
+img.user-li {
+    width: 45px;
+    height: 45px;
+    border-radius: 200px;
+}
+
+p.font-name {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 36px;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+p.font-ad {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: -5px 0 0 0;
+}
+.pl-0 {
+    padding-left: 0;
+}
+.text-right {
+    text-align: right;
+}
+.vertical-ic {
+    color: #fff;
+    margin-top: 20px;
+}
+p.bell-icon {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    position: relative;
+}
+p.bell-icon a {
+    color: #fff;
+    font-size: 25px;
+}
+span.round-white {
+    width: 10px;
+    height: 10px;
+    background: #93faff;
+    position: absolute;
+    right: 17px;
+    border-radius: 100px;
+    top: 3px;
+}
+.dash-menu {
+    width: 25%;
+    box-shadow: 0px 7px 6px 1px #d9d9d9;
+    height: 100%;
+}
+ul.menu-left.white-left li {
+    border-bottom: 0 !important;
+}
+ul.menu-left.white-left li a{
+    font-size: 25px;
+    color: #fff;
+    padding: 6px 0;
+    text-align: center;
+}
+ul.menu-left.white-left li a:hover { 
+    color: #fff !important; 
+}
+.sidebar-collapsed a.list-group-item {
+    padding: 20px 35px;
+    padding-bottom: 0;
+}
+
+/**/
+.working-box {
+    padding: 20px; 
+}
+.booked {
+    background: #C2DDE4;
+    border-radius: 15px;
+    padding: 20px;
+}
+.booked h5 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    color: #156075;
+}
+.booked  p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: #156075;
+}
+.des-ic {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 25px;
+    color: #156075;
+}
+
+.booked.bg-C6EEE2 {background: #C6EEE2;}
+.booked.bg-C6EEE2 h5{color: #208C84;}
+.booked.bg-C6EEE2 p{color: #208C84;}
+.booked.bg-C6EEE2 .des-ic{color: #208C84;}
+
+.booked.bg-EDEEC6 {background: #EDEEC6;}
+.booked.bg-EDEEC6 h5{color: #3F3309;}
+.booked.bg-EDEEC6 p{color: #3F3309;}
+.booked.bg-EDEEC6 .des-ic{color: #3F3309;}
+
+.booked.bg-FFD6E5 {background: #FFD6E5;}
+.booked.bg-FFD6E5 h5{color: #6F3B4E;}
+.booked.bg-FFD6E5 p{color: #6F3B4E;}
+.booked.bg-FFD6E5 .des-ic{color: #6F3B4E;}
+
+.hover-ef p{margin: 0 0 5px 0;}
+p.g-color {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3DC9A1;
+}
+.p-16  { 
+    font-size: 16px;
+    line-height: 24px;
+    color: #191919;
+}
+.p-16 b {
+    font-weight: 600; 
+}
+ .short-p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #7B7A7A;
+}
+p.date-r {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #191919;
+}
+p.time-r {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #191919;
+}
+.card-box h3 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #191919;
+}
+.right-icons i {
+    font-size: 30px;
+    color: #191919;
+}
+.hover-ef { 
+    border-radius: 15px;
+    padding: 15px;
+}
+.hover-ef:hover {
+    background: #E8F8F2; 
+}
+
+.sp-15 {
+    padding: 0 15px;
+}
+.card-box {
+    background: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 15px;
+    padding: 15px;
+}
+p.aed-r {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    color: #191919;
+}
+.Reques a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 0%;
+    text-align: center;
+    color: #208C84;
+    text-decoration: none;
+}
+
+
+
+@media (min-width:1700px) {
+p.aed-r { 
+    font-size: 24px;
+    line-height: 36px; 
+}    
+.booked  p { 
+    font-size: 20px;
+    line-height: 30px; 
+}    
+img.user-li {
+    width: 72px;
+    height: 72px; 
+}
+.round-user .round { 
+    bottom: 0px;
+}
+p.font-ad { 
+    font-size: 16px; 
+}
+p.font-name { 
+    font-size: 24px;  
+}
+.main-menu ul.navbar-nav li a {  
+    font-size: 20px;
+    line-height: 30px;  
+    padding: 13px 15px !important;
+}
+nav.main-menu a.navbar-brand {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+
+
+
+}
+
+@media (max-width:1199px) {
+.main-menu ul.navbar-nav li a { 
+    font-size: 15px; 
+    padding: 13px 7px !important;
+}
+ul.menu-left  li a { 
+    padding: 6px 21px; 
+    font-size: 16px; 
+}
+
+
+}
+
+@media (max-width:991px) {
+div#profile p.name-uaser { 
+    font-size: 17px;
+    line-height: 19px; 
+}
+div#profile p.short-mes { 
+    font-size: 16px;
+    line-height: 24px; 
+}
+ul#myTab button { 
+    font-size: 16px;
+}
+.offcanvas .online-a a { 
+    font-size: 14px; 
+}
+ul.menu-left  li a {
+    padding: 6px 11px;
+    font-size: 14px;
+    line-height: 25.6px;
+}
+ul#myTab li.nav-item {
+    width: 50%;
+}
+img.left-logo {
+    margin: -10px 0  0 10px;
+    width: 75%;
+}
+.navbar-light .navbar-toggler {
+    background: #fff;
+}
+.po-a {
+    position: absolute;
+    background: #000000;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+.dash-menu {
+    width: 35%; 
+}
+.menu-part { 
+    max-width: 25.8%; 
+}
+
+
+}
+.dash-right {
+    padding: 30px 20px;
+}
+.dash-right h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #000;
+}
+ .span-color{ 
+    color:  #3247c8;
+}
+
+
+.dash-card {
+    padding: 24px 16px;
+    border-radius: 8px;
+}
+.dash-card-h5 {
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 1.2;
+    color:#fff;
+}
+.dash-card h6 {
+     font-weight: 700;
+    font-size: 19px;
+    line-height: 1.2;
+    color:#fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.f-12 { 
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    color:#fff;
+}
+.d-c-1 {
+    background: linear-gradient(93.12deg, #0EB1D2 0%, #0055BA 100%);
+}
+.d-c-2 {
+    background: linear-gradient(92.84deg, #3d3f40 0.42%, #000000 100%);
+}
+.d-c-3 {
+    background: linear-gradient(92.84deg, #53D8F4 0.42%, #0A8199 100%);
+}
+.dash-card { 
+    margin-bottom: 15px;
+}
+
+
+
+@media (max-width:767px) {
+.dash-menu {
+    width: 100%;
+}
+.menu-part {
+    max-width: 100%;
+}
+.flex-part {
+    display: unset;
+}
+.menu-part { 
+    position: unset; 
+}
+ul.menu-left  li a { 
+    font-size: 17px;
+    line-height: 27.6px;
+}
+
+.dash-right h1 {
+    font-size: 26px; 
+}
+
+}
+
+
+
+@media (max-width:360px) {
+nav.main-menu a.navbar-brand {
+    font-size: 26px; 
+}
+ul#myTab button {
+    font-size: 13px;
+}
+.dash-right h1 {
+    font-size: 22px; 
+}
+
+}

@@ -18,15 +18,32 @@
             height: 570px;
             margin-bottom: 53px;
         }
+
+        .servicesImage {
+            width: 100%;
+            height: 247px;
+            object-fit: cover;
+        }
+
+        .services-item {
+            height: 550px;
+        }
+
+        .img-fluid.eff-image {
+            width: 100%;
+            height: 592px;
+            object-fit: cover;
+            margin-top: 15px;
+        }
     </style>
 </head>
 
 <body data-spy="scroll" data-target="#fixedNavbar">
     <!--! include header section -->
     <?php
-        // Include the header file
-        include './components/header.php';
-        ?>
+    // Include the header file
+    include './components/header.php';
+    ?>
     <!--! include header section -->
 
     <!--// Page Wrapper Start //-->
@@ -209,7 +226,7 @@
                         <div class="services-item">
                             <div class="services-icon">
                                 <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RlVMTFklMjByZXNwb25zaXZlfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
-                                    alt="ser-1">
+                                    alt="ser-1" class="servicesImage">
                             </div>
                             <div class="services-body">
                                 <h5>Fully Responsive</h5>
@@ -226,7 +243,7 @@
                             <div class="services-img">
                                 <div class="services-icon">
                                     <img src="https://images.unsplash.com/photo-1553895501-af9e282e7fc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VhcmNoJTIwZW5nZ2luZSUyMG9wdGltaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                                        alt="ser-2">
+                                        alt="ser-2" class="servicesImage">
                                 </div>
                             </div>
                             <div class="services-body">
@@ -244,7 +261,7 @@
                         <div class="services-item">
                             <div class="services-icon">
                                 <img src="https://plus.unsplash.com/premium_photo-1683984171269-04c84ee23234?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aXQlMjBkZWxpdmVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                                    alt="ser-3">
+                                    alt="ser-3" class="servicesImage">
                             </div>
                             <div class="services-body">
                                 <h5>ON Time Delivery</h5>
@@ -260,7 +277,7 @@
                         <div class="services-item">
                             <div class="services-icon">
                                 <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaCUyMHN1cHBvcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
-                                    alt="ser-4">
+                                    alt="ser-4" class="servicesImage">
                             </div>
                             <div class="services-body">
                                 <h5>Support When You Neede</h5>
@@ -277,7 +294,7 @@
                         <div class="services-item">
                             <div class="services-icon">
                                 <img src="https://plus.unsplash.com/premium_photo-1664444320092-7b0a29f5edb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dHJ1c3RlZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                                    alt="ser-5">
+                                    alt="ser-5" class="servicesImage">
                             </div>
                             <div class="services-body">
                                 <h5>Trusted By Thousands Of Clients</h5>
@@ -293,7 +310,7 @@
                         <div class="services-item">
                             <div class="services-icon">
                                 <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhbnNwYXJlbmN5JTIwaW4lMjB3b3JrfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
-                                    alt="ser-6">
+                                    alt="ser-6" class="servicesImage">
                             </div>
                             <div class="services-body">
                                 <h5>Transparency In Work</h5>
@@ -319,7 +336,7 @@
                         <div class="col-lg-6">
                             <div class="work-process-img">
                                 <img src="https://lh3.googleusercontent.com/p/AF1QipO0purB6qWXEI2ZguZSpBxPK_RZHc92a-MZhYDJ=s1360-w1360-h1020"
-                                    alt="About image" class="img-fluid">
+                                    alt="About image" class="img-fluid eff-image">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -443,7 +460,8 @@
                                 </div>
                                 <div class="col-9">
                                     <h5>Eledant Aligner</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, ipsa minima, consectetur accusamus asperiores cupiditate.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, ipsa minima,
+                                        consectetur accusamus asperiores cupiditate.</p>
                                 </div>
                             </div>
                         </div>
@@ -456,7 +474,8 @@
                                 </div>
                                 <div class="col-9">
                                     <h5>Code Dreamz</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eius numquam suscipit repudiandae ali</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eius numquam
+                                        suscipit repudiandae ali</p>
                                 </div>
                             </div>
                         </div>
@@ -604,7 +623,7 @@
                 </div>
                 <div class="owl-theme owl-carousel" id="clientsCarousel">
                     <div class="item">
-                        <div class="clients-card">
+                        <div class="clients-card" style="border-radius: 25px;">
                             <div class="img">
                                 <img src="./img/clients/user4.jpg" alt="Clients image" class="img-fluid">
                             </div>
@@ -631,7 +650,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="clients-card">
+                        <div class="clients-card" style="border-radius: 25px;">
                             <div class="img">
                                 <img src="./img/clients/user1.jpg" Clients image" class="img-fluid">
                             </div>
@@ -656,7 +675,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="clients-card">
+                        <div class="clients-card" style="border-radius: 25px;">
                             <div class="img">
                                 <img src="./img/clients/user2.jpg" alt="Clients image" class="img-fluid">
                             </div>
@@ -682,7 +701,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="clients-card">
+                        <div class="clients-card" style="border-radius: 25px;">
                             <div class="img">
                                 <img src="./img/clients/user3.jpg" alt="Clients image" class="img-fluid">
                             </div>
@@ -801,68 +820,68 @@
         <!--// Our Pricing End //-->
 
         <!--// Latest Blog Start //-->
-<section class="section">
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-6">
-            <div class="section-heading">
-                <h2 class="section-title">Latest<span>Blog</span></h2>
-                <p>
-                    It is a long established fact that a reader will be distracted
-                    by the readable content..
-                </p>
-            </div>
-        </div>
-    </div>
+        <section class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section-heading">
+                            <h2 class="section-title">Latest<span>Blog</span></h2>
+                            <p>
+                                It is a long established fact that a reader will be distracted
+                                by the readable content..
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="owl-theme owl-carousel" id="blogCarousel">
                     <!--php title and desc integraitnio  -->
                     <?php
-$data = file_get_contents('http://localhost:3000/api/blogs');
-$blogs = json_decode($data, true);
-$latestBlogs = array_reverse($blogs); 
-$limitedBlogs = array_slice($latestBlogs, 0, 6);
+                    $data = file_get_contents('http://localhost:3000/api/blogs');
+                    $blogs = json_decode($data, true);
+                    $latestBlogs = array_reverse($blogs);
+                    $limitedBlogs = array_slice($latestBlogs, 0, 6);
 
-foreach ($limitedBlogs as $blog) {
-    $blogID = $blog['_id'];
-    $title = $blog['title'];
-    $description = $blog['description'];
-    $image = $blog['image'];
-    $status = $blog['status'];
-    
-    if ($status === 'Published') {
-       // Slice title to 4 words
-       $titleWords = explode(' ', $title);
-       $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
-   
-       // Slice description to 18 words
-       $descriptionWords = explode(' ', $description);
-       $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
-   
+                    foreach ($limitedBlogs as $blog) {
+                        $blogID = $blog['_id'];
+                        $title = $blog['title'];
+                        $description = $blog['description'];
+                        $image = $blog['image'];
+                        $status = $blog['status'];
+
+                        if ($status === 'Published') {
+                            // Slice title to 4 words
+                            $titleWords = explode(' ', $title);
+                            $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
+
+                            // Slice description to 18 words
+                            $descriptionWords = explode(' ', $description);
+                            $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
 
 
-    $blogCard = '
+
+                            $blogCard = '
                     <div class="item">
                         <div class="blog-card">
                             <div class="img">
-                                <a href="blog-single.php">
-                                    <img src="http://localhost:3000/uploads/'. $image .'" alt="Blog image" class="img-fluid" style="width: 100%; height: 200px;object-fit: cover;">
+                                <a href="blog-single.php?' . $blogID . '">
+                                    <img src="http://localhost:3000/uploads/' . $image . '" alt="Blog image" class="img-fluid" style="width: 100%; height: 200px;object-fit: cover;">
                                 </a>
                             </div>
                             <div class="body">
-                                <h5><a href="blog-single.php">'. $slicedTitle .'</a></h5>
+                                <h5><a href="blog-single.php?' . $blogID . '">' . $slicedTitle . '</a></h5>
                                 <p>
-                                   '. $slicedDescription .'
+                                   ' . $slicedDescription . '
                                 </p>
-                                <a href="blog-single.php" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
+                                <a href="blog-single.php?' . $blogID . '" class="blog-button">Read More<i class="fa fa-arrow-right ml-3"></i></a>
                             </div>
                         </div>
                     </div>';
 
-                    echo $blogCard;
-    }
-}
-?>
+                            echo $blogCard;
+                        }
+                    }
+                    ?>
 
                 </div>
             </div>

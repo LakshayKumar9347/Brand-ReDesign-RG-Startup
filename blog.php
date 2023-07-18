@@ -3,16 +3,16 @@
 
 <head>
     <?php
-    include './components/headLinks.php' 
-    ?>
+    include './components/headLinks.php'
+        ?>
     <?php
-    include './components/jqueryScripts.php' 
-    ?>
+    include './components/jqueryScripts.php'
+        ?>
 
     <title>Blog</title>
     <style>
-        .blog-card{
-            height:575px
+        .blog-card {
+            height: 575px
         }
     </style>
 </head>
@@ -51,41 +51,41 @@
 
         <!--// Blog Grid Start //-->
         <section class="section">
-        <div class="container">
-            <div class="row">
-            <div class="section-heading">
-                <h2 class="section-title">Latest<span>Blog</span></h2>
-                <p>
-                    It is a long established fact that a reader will be distracted
-                    by the readable content..
-                </p>
-            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="section-heading">
+                        <h2 class="section-title">Latest<span>Blog</span></h2>
+                        <p>
+                            It is a long established fact that a reader will be distracted
+                            by the readable content..
+                        </p>
+                    </div>
 
-        <!--php title and desc integraitnio  -->
-        <?php
-$data = file_get_contents('http://localhost:3000/api/blogs');
-$blogs = json_decode($data, true);
-$latestBlogs = array_reverse($blogs); 
+                    <!--php title and desc integraitnio  -->
+                    <?php
+                    $data = file_get_contents('http://localhost:3000/api/blogs');
+                    $blogs = json_decode($data, true);
+                    $latestBlogs = array_reverse($blogs);
 
-foreach ($latestBlogs as $blog) {
-    $blogID = $blog['_id'];
-    $title = $blog['title'];
-    $description = $blog['description'];
-    $image = $blog['image'];
-    $status = $blog['status'];
-    
-    if ($status === 'Published') {
-       // Slice title to 4 words
-       $titleWords = explode(' ', $title);
-       $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
-   
-       // Slice description to 18 words
-       $descriptionWords = explode(' ', $description);
-       $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
-   
+                    foreach ($latestBlogs as $blog) {
+                        $blogID = $blog['_id'];
+                        $title = $blog['title'];
+                        $description = $blog['description'];
+                        $image = $blog['image'];
+                        $status = $blog['status'];
+
+                        if ($status === 'Published') {
+                            // Slice title to 4 words
+                            $titleWords = explode(' ', $title);
+                            $slicedTitle = implode(' ', array_slice($titleWords, 0, 4));
+
+                            // Slice description to 18 words
+                            $descriptionWords = explode(' ', $description);
+                            $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
 
 
-    $blogCard = '
+
+                            $blogCard = '
     <div class="col-md-6 col-sm-6 col-lg-4">
     <div class="blog-card">
         <div class="img">
@@ -102,21 +102,22 @@ foreach ($latestBlogs as $blog) {
 </div>';
 
 
-    echo $blogCard;
-}}
-?>
+                            echo $blogCard;
+                        }
+                    }
+                    ?>
 
-          </div>
-            <div class="pagination-wrap">
-                <a href="#" class="pagination-link"><i class="fa fa-arrow-left"></i></a>
-                <a href="#" class="pagination-link active">1</a>
-                <a href="#" class="pagination-link">2</a>
-                <a href="#" class="pagination-link">3</a>
-                <a href="#" class="pagination-link"><i class="fa fa-arrow-right"></i></a>
+                </div>
+                <div class="pagination-wrap">
+                    <a href="#" class="pagination-link"><i class="fa fa-arrow-left"></i></a>
+                    <a href="#" class="pagination-link active">1</a>
+                    <a href="#" class="pagination-link">2</a>
+                    <a href="#" class="pagination-link">3</a>
+                    <a href="#" class="pagination-link"><i class="fa fa-arrow-right"></i></a>
+                </div>
+                <!--// .pagination-wrap //-->
             </div>
-            <!--// .pagination-wrap //-->
-        </div>
-    </section>
+        </section>
         <!--php title and desc integraitnio  -->
         <!--// Blog Grid End //-->
 

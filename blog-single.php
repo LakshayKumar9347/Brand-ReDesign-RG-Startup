@@ -23,7 +23,8 @@
             height: 94px;
             object-fit: cover;
         }
-        .commentLogo{
+
+        .commentLogo {
             width: 30px;
         }
     </style>
@@ -118,13 +119,20 @@
                                             $title = $latestPublishedBlog['title'];
                                             $description = $latestPublishedBlog['description'];
                                             $image = $latestPublishedBlog['image'];
+                                            // Slice title to 4 words
+                                            $titleWords = explode(' ', $title);
+                                            $slicedTitle = implode(' ', array_slice($titleWords, 0, 11));
 
+                                            // Slice description to 18 words
+                                            // $descriptionWords = explode(' ', $description);
+                                            // $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
+                            
                                             $blogSingleMainNoId = '
                                 <div class="blog-post-img">
                                     <img  src="http://localhost:3000/uploads/' . $image . '" alt="Blog Post Image" class="bg-image img-fluid">
                                 </div>
                                 <div class="blog-text">
-                                    <h5>' . $title . '</h5>
+                                    <h5>' . $slicedTitle . '</h5>
                                     <div class="author-meta" style="margin: 15px 0 15px 0;">
                                         <a href="#"><span class="far fa-calendar-alt"></span>April 10</a>
                                         <a href="#"><span class="far fa-user"></span>By Admin</a>
@@ -161,13 +169,21 @@
                                             $description = $blog['description'];
                                             $image = $blog['image'];
 
+                                            // Slice title to 4 words
+                                            $titleWords = explode(' ', $title);
+                                            $slicedTitle = implode(' ', array_slice($titleWords, 0, 17));
+
+                                            // Slice description to 18 words
+                                            // $descriptionWords = explode(' ', $description);
+                                            // $slicedDescription = implode(' ', array_slice($descriptionWords, 0, 18));
+                            
                                             $blogSingleMain =
                                                 '
                                         <div class="blog-post-img">
                                             <img src="http://localhost:3000/uploads/' . $image . '" alt="Blog Post Image" class="bg-image img-fluid">
                                         </div>
                                         <div class="blog-text">
-                                            <h5>' . $title . '</h5>
+                                            <h5>' . $slicedTitle . '</h5>
                                             <div class="author-meta" style="margin: 15px 0 15px 0;">
                                                 <a href="#"><span class="far fa-calendar-alt"></span>April 10</a>
                                                 <a href="#"><span class="far fa-user"></span>By Admin</a>
@@ -203,7 +219,8 @@
                             <div class="comments-wrap">
                                 <h5 class="inner-header-title">Comments (4)</h5>
                                 <div class="comment-item media">
-                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png" alt="Comment image" class="img-fluid commentLogo">
+                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png"
+                                        alt="Comment image" class="img-fluid commentLogo">
                                     <div class="comment-item-body">
                                         <h6 class="comment-item-title">Alexandro Corvin</h6>
                                         <div class="comment-meta">
@@ -217,7 +234,8 @@
                                     </div>
                                 </div>
                                 <div class="comment-item media">
-                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png" alt="Comment image" class="img-fluid commentLogo">
+                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png"
+                                        alt="Comment image" class="img-fluid commentLogo">
                                     <div class="comment-item-body">
                                         <h6 class="comment-item-title">Eduardo Dutra</h6>
                                         <div class="comment-meta">
@@ -232,7 +250,8 @@
                                 </div>
                                 <!-- <div class="comment-item sub-comment-item media"> -->
                                 <div class="comment-item media">
-                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png" alt="Comment image" class="img-fluid commentLogo">
+                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png"
+                                        alt="Comment image" class="img-fluid commentLogo">
                                     <div class="comment-item-body">
                                         <h6 class="comment-item-title">George William</h6>
                                         <div class="comment-meta">
@@ -246,7 +265,8 @@
                                     </div>
                                 </div>
                                 <div class="comment-item media">
-                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png" alt="Comment image" class="img-fluid mr-3 commentLogo">
+                                    <img src="https://textpixie.netlify.app/static/media/profile.5bcd6f4fc431fffe39a5.png"
+                                        alt="Comment image" class="img-fluid mr-3 commentLogo">
                                     <div class="comment-item-body">
                                         <h6 class="comment-item-title">Adrian George</h6>
                                         <div class="comment-meta">
@@ -323,26 +343,26 @@
                             <h5 class="inner-header-title">Category</h5>
                             <ul class="blog-category-list clearfix">
                                 <li>
-                                    <a href="./blog.php">App Development<span class="category-count">(10)</span></a>
+                                    <a href="./blog-single.php?category=App Development">App Development<span class="category-count">(10)</span></a>
                                 </li>
                                 <li>
-                                    <a href="./blog.php">Web Designing<span class="category-count">(18)</span></a>
+                                    <a href="./blog-single.php?category=Web Designing">Web Designing<span class="category-count">(18)</span></a>
                                 </li>
                                 <li>
-                                    <a href="./blog.php">Web Development<span class="category-count">(5)</span></a>
+                                    <a href="./blog-single.php?category=Web Development">Web Development<span class="category-count">(5)</span></a>
                                 </li>
                                 <li>
-                                    <a href="./blog.php">Mobile App Development<span
+                                    <a href="./blog-single.php?category=Mobile App Development">Mobile App Development<span
                                             class="category-count">(22)</span></a>
                                 </li>
                                 <li>
-                                    <a href="./blog.php">Digital Marketing<span class="category-count">(19)</span></a>
+                                    <a href="./blog-single.php?category=Digital Marketing">Digital Marketing<span class="category-count">(19)</span></a>
                                 </li>
                                 <li>
-                                    <a href="./blog.php">SEO & SMO Services<span class="category-count">(19)</span></a>
+                                    <a href="./blog-single.php?category=SEO & SMO Services">SEO & SMO Services<span class="category-count">(19)</span></a>
                                 </li>
                                 <li>
-                                    <a href="./blog.php">PPC<span class="category-count">(13)</span></a>
+                                    <a href="./blog-single.php?category=PPC">PPC<span class="category-count">(13)</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -360,7 +380,7 @@
                         $recentPublishedBlogs = array_filter($blogs, function ($blog) {
                             return isPublishedBlog($blog);
                         });
-                        $recentPublishedBlogs = array_slice(array_reverse($recentPublishedBlogs), 0, 3);
+                        $recentPublishedBlogs = array_slice(array_reverse($recentPublishedBlogs), 0, 5);
 
                         foreach ($recentPublishedBlogs as $blog) {
                             $blogID = $blog['_id'];
