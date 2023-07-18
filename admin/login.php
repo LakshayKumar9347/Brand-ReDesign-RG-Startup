@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the cURL request
     $response = curl_exec($curl);
     if ($response === false) {
-        echo 'Server Not Sending Any Response';
+        echo 'Connection Refused';
     } else {        
         if ($response === 'Login! Successful') {
             $_SESSION["loginStatus"] = $response;
