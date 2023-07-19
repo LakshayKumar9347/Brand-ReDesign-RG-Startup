@@ -652,7 +652,7 @@
                     <div class="item">
                         <div class="clients-card" style="border-radius: 25px;">
                             <div class="img">
-                                <img src="./img/clients/user1.jpg" Clients image" class="img-fluid">
+                                <img src="./img/clients/user1.jpg"  class="img-fluid">
                             </div>
                             <div class="text">
                                 <h5>Simran</h5>
