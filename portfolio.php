@@ -94,10 +94,12 @@
             background-color: white;
             cursor: pointer;
         }
-        .currentActive:active{
+
+        .currentActive:active {
             background-color: #a2ca1d;
             color: white;
         }
+
         .btn:hover {
             background-color: #ddd;
         }
@@ -546,8 +548,8 @@
 
     <!-- custom script -->
     <?php
-include './components/jqueryScripts.php';
-?>
+    include './components/jqueryScripts.php';
+    ?>
     <!--! custom script magnify popup-->
     <script>
         $(document).ready(function () {
